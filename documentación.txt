@@ -1,0 +1,19 @@
+Documentación Proyecto Los Yuyitos
+
+05/04 -> inicio del proyecto desde cero
+12/04 -> desarrollo de las primeras rutas (inicio, contacto y galeria)
+21/04 -> creación de modelos
+22/04 -> creación super usuario (diegoadmin , 12345)
+         conexión con base de datos mysql realizada
+         se agregaron los primeros productos y marcas
+23/04 -> ahora los productos están listados en la pàgina principal
+25/04 -> edicion del panel de administración
+26/04 -> edicion de formularios
+         implementacion de bootstrap4
+         desarrollo de CRUD
+         (agregar producto,
+         listar productos,
+         borrar productos,
+         modificar productos)
+27/04 -> desarollo sistema de ingreso (login)
+         

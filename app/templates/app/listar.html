@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h2>Clientes Registrados en el Sistema</h2>
+            <hr>
+            <table class = "table table-striped table-hover table-responsive-sm">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>RUT</th>
+                    <th>DV</th>
+                    <th>Dirección</th>
+                    <th>¿Posee Deuda?</th>
+                </tr>
+                {% for p in clientes %}
+                <tr>
+                    <td>{{ p.nombre | title }}</td>
+                    <td>{{ p.apaterno | title }}</td>
+                    <td>{{ p.amaterno | title }}</td>
+                    <td>{{ p.rut | title }}</td>
+                    <td>{{ p.dv | title }}</td>
+                    <td>{{ p.direccion | title }}</td>
+                    <td>{{ p.deuda | title }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

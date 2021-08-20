@@ -1,0 +1,37 @@
+{% extends 'app/base.html' %}
+
+{% block contenido %}
+{% load crispy_forms_tags %}
+<br>
+<div class="row">
+    <div class="col-12 col-md-6 offset-md-3">
+        <div class="card-body">
+            <div class="title">Número de celular y whatsapp</div>
+            <p>+56 9 5863442</p>
+            <div class="title">Número de teléfono</div>
+            <p>+2 2 9618200</p>
+            <div class="card">
+                <div class="card-body"style="background-color:#6E1866;">
+                    <div class="d-flex justify-content-center">
+                        <h1 style="color:white;">CONTACTANOS!</h1>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <form action="" class="" method="post">
+                {% csrf_token %}
+                {{ form | crispy}}
+                <hr>
+                <br>
+                <div class = "d-flex justify-content-end">
+                    <input type="reset" value="Cancelar" class ="btn btn-secondary">
+                    &nbsp;
+                    <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+            {{mensaje}}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

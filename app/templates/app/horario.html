@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block js %}
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block contenido %}
+<br><br>
+<div class="card">
+    <div class="card-body"style="background-color:#6E1866;">
+        <div class="d-flex justify-content-center">
+            <h1 style="color:white;">HORARIO DE NUESTRO ALMACÉN</h1>
+        </div>
+    </div>
+  </div>
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped table-bordered table-hover table-dark table-responsive-sm">
+                <thead>
+                    <tr>
+                        <th>Días</th>
+                        <th>Hora Apertura</th>
+                        <th>Hora Cierre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes - Viernes</td>
+                        <td>08:00 A.M</td>
+                        <td>21:00 P.M</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado - Domingo</td>
+                        <td>10:00 A.M</td>
+                        <td>20:00 P.M</td>
+                    </tr>
+                    <tr>
+                        <td>Días Feriados</td>
+                        <td>9:00 A.M</td>
+                        <td>18:00 P.M</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br><br>
+    <hr>
+{% endblock %}

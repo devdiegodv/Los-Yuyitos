@@ -1,0 +1,64 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+      $('.slider').bxSlider({
+          mode: 'fade',//horizontal, vertical, fade
+          auto: true,
+          pause: 2000
+      });
+    });
+</script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+{% endblock %}
+
+{% block contenido %}
+
+<div class="slider">
+    <div>
+        <img src="{% static 'app/img/banner/banner1.jpg' %}" alt="">
+    </div>
+    <div>
+        <img src="{% static 'app/img/banner/banner2.jpg' %}" alt="">
+    </div>
+    <div>
+        <img src="{% static 'app/img/banner/banner3.jpeg' %}" alt="">
+    </div>
+    <div>
+        <img src="{% static 'app/img/banner/banner4.jpg' %}" alt="">
+    </div>
+</div>
+{% load humanize %}
+<div class="card">
+    <div class="card-body"style="background-color:#6E1866;">
+        <div class="d-flex justify-content-center">
+            <h1 style="color:white;">PRODUCTOS DE NUESTRO ALMACÉN</h1>
+        </div>
+    </div>
+  </div>
+<div class="productos">
+    {% for p in productos %}
+    <div class="producto">
+        <div class="contenedor_producto">
+            {% if p.imagen %}
+            <img src="{{ p.imagen.url }}" alt="imagen producto">
+            {% endif %}
+            <div class="detalle">
+                <h5>{{ p.nombre | capfirst }}</h5>
+                <h4>{{ p.descripcion}}</h4>
+                <h4>${{ p.precio | intcomma }}</h4>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

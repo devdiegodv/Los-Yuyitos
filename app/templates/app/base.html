@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Yuyitos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'app/css/estilos.css' %}">
+    
+    <link rel='shortcut icon' type="image/png" href="{% static 'favicon.ico' %}"/>
+</head>
+<body>
+
+    
+    <header id="header">
+        <img class="menu" src="{% static 'app/img/menuiconwhite.png' %}" alt="menu" id="menu">
+        <div class="contenedor_logo">
+            <img  class="logo"  src="{% static 'app/img/LOGOYUYITOS.png' %}" alt="logo">
+        </div>
+
+        <div>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}" class="btn btn-info btn-sm" role="button">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contacto' %}" class="btn btn-info btn-sm" role="button">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'galeria' %}" class="btn btn-info btn-sm" role="button">Galeria Los Yuyitos</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'faq' %}" class="btn btn-info btn-sm" role="button">F.A.Q Los Yuyitos</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'horario' %}" class="btn btn-info btn-sm" role="button">Horarios</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'ubicacion' %}" class="btn btn-info btn-sm" role="button">Ubicacion</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'agregar_producto' %}" class="btn btn-info btn-sm" role="button">Agregar Producto</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'listar_productos' %}" class="btn btn-info btn-sm" role="button">Editar Productos</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'listar_clientes' %}" class="btn btn-info btn-sm" role="button">Clientes</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}" class="btn btn-info btn-sm" role="button">Cerrar Sesion</a>
+                    </li>
+                    <li>
+                         <a href="#" style="color:whitesmoke;">@ {{ user.username }}</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login' %}" class="btn btn-info btn-sm" role="button">Iniciar Sesion</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="contenido">
+
+        {% block contenido %}
+        {% endblock %}
+
+    </div>
+    <br>
+    <footer>
+        <div class="marcas">
+            <img src="{% static 'app/img/footer/acuenta.png' %}" alt="acuenta">
+            <img src="{% static 'app/img/footer/cocacola.png' %}" alt="cocacola">
+            <img src="{% static 'app/img/footer/fruna.png' %}" alt="fruna">
+            <img src="{% static 'app/img/footer/jumbo.png' %}" alt="jumbo">
+            <img src="{% static 'app/img/footer/lider.png' %}" alt="lider">
+            <img src="{% static 'app/img/footer/monsterlogo.jpg' %}" alt="monsterlogo">
+        </div>
+        <div class="logo_footer">
+            <img src="{% static 'app/img/LOGOYUYITOS.png' %}" alt="logo">
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{% static 'app/js/menu.js' %}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    {% if messages %}
+        {% for m in messages %}
+            <script>
+                Swal.fire({
+                    "tittle": "Felicitaciones",
+                    "text": "{{m}}",
+                    "icon": "success"
+                })
+            </script>
+        {% endfor %}
+    {% endif %}
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

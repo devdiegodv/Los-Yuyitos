@@ -1,0 +1,7 @@
+django == 3.2
+pillow
+mysqlclient
+django-admin-interface
+django-crispy-forms
+folium
+xhtml2pdf
