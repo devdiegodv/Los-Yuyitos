@@ -1,0 +1,9 @@
+     Lista de empleados           Los Yuyitos
+
+
+| Nombre: Esteban Maldonado Jara | rut: 19986245 | dirección: san bernardo | sueldo: 320000
+| telefono: 934813734 | fecha: 2021-07-28 - 2021-07-31 | cargo: Cajero
+
+| Nombre: Andres Ovalle Santos | rut: 19986245 | dirección: san bernardo | sueldo: 320000
+| telefono: 934813738 | fecha: 2021-06-30 - 2021-07-13 | cargo: Cajero
+

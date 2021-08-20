@@ -1,0 +1,9 @@
+     Lista de fiados         Los Yuyitos
+
+
+| Nombre del deudor Javier Orellana Carmona | monto: 500 | Fecha de fiado: 2021-07-28
+
+| Nombre del deudor Julio Cereceda Fuentes | monto: 500 | Fecha de fiado: 2021-07-28
+
+| Nombre del deudor Catalina Monsalvez Uribe | monto: 500 | Fecha de fiado: 2021-07-28
+

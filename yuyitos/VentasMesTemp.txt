@@ -1,0 +1,7 @@
+     Lista de ventas mes actual            Los Yuyitos
+
+
+| Nombre producto: Tarro Leche nido | Cantidad vendida: 3 | Total: 27969
+
+| Nombre producto: Longaniza | Cantidad vendida: 3 | Total: 20977
+
