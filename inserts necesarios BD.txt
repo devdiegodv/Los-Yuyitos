@@ -1,0 +1,53 @@
+
+INSERT INTO empresa (nombre, rut, dv, rubro, direccion, telefono, email)
+VALUES ('Fruna', '19986245', 'k', 'Ventas', 'Apoquindo 432', '25280581', 'frunacentral@gmail.com');
+
+INSERT INTO producto (descripcion, familia, tipo, fechaElab, fechaVenc, idempresa, precioprodunitario, imagen)
+VALUES ('Leche', '1', '1', '2021-06-15', '2021-08-15', '2', '999', 'uasdll.jfif');
+
+INSERT INTO producto (descripcion, familia, tipo, fechaElab, fechaVenc, idempresa, precioprodunitario, imagen)
+VALUES ('Manjar Bolsa', '1', '1', '2021-06-15', '2021-08-15', '2', '999', 'uasdll1.jfif');
+
+INSERT INTO producto (descripcion, familia, tipo, fechaElab, fechaVenc, idempresa, precioprodunitario, imagen)
+VALUES ('Manjar Pote', '1', '1', '2021-06-15', '2021-08-15', '2', '999', 'uasdll12.jfif');
+
+
+INSERT INTO producto (descripcion, familia, tipo, fechaElab, fechaVenc, idempresa, precioprodunitario, imagen)
+VALUES ('Yoghurt Protein', '1', '1', '2021-06-15', '2021-08-15', '2', '999', 'uzasdll12.jfif');
+
+INSERT INTO producto (descripcion, familia, tipo, fechaElab, fechaVenc, idempresa, precioprodunitario, imagen)
+VALUES ('Queso', '1', '1', '2021-06-15', '2021-08-15', '2', '999', 'uzasdll12.jfif');
+
+INSERT INTO producto (descripcion, familia, tipo, fechaElab, fechaVenc, idempresa, precioprodunitario, imagen)
+VALUES ('Manjar Panchito', '1', '1', '2021-06-15', '2021-08-15', '1', '999', 'uzasdll12.jfif');
+
+INSERT INTO producto (descripcion, familia, tipo, fechaElab, fechaVenc, idempresa, precioprodunitario, imagen)
+VALUES ('Mani', '1', '1', '2021-06-15', '2021-08-15', '1', '999', 'uzasdll12.jfif');
+
+INSERT INTO producto (descripcion, familia, tipo, fechaElab, fechaVenc, idempresa, precioprodunitario, imagen)
+VALUES ('Helado', '1', '1', '2021-06-15', '2021-08-15', '1', '999', 'uzasdll12.jfif');
+
+INSERT INTO boleta (fecha, total, deuda)
+VALUES ('2021-01-01','-1','-1')
+
+INSERT INTO fiado (idventa)
+VALUES ('1');
+
+INSERT INTO venta (idempleado,numboleta)
+VALUES ('6','1');
+
+INSERT INTO usuarios (correo,pass,cargo)
+VALUES ('juanita@gmail.com','12345','Administrador');
+
+Update inventario set stock=20 where producto_codproducto= 4;
+
+familia = 1 = leches
+tipo = 1 = lacteos
+empresa = 1 = fruna
+empresa = 2 = colun
+
+insert into inventario (fechainventario,idempleado,producto_codproducto,stockcritico,stock) values ("2020-06-24",2,7,5,15);
+insert into inventario (fechainventario,idempleado,producto_codproducto,stockcritico,stock) values ("2020-06-24",2,8,5,15);
+insert into inventario (fechainventario,idempleado,producto_codproducto,stockcritico,stock) values ("2020-06-24",2,9,5,15);
+insert into inventario (fechainventario,idempleado,producto_codproducto,stockcritico,stock) values ("2020-06-24",2,10,5,15);
+insert into inventario (fechainventario,idempleado,producto_codproducto,stockcritico,stock) values ("2020-06-24",2,11,5,15);

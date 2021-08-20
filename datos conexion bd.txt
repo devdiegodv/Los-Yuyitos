@@ -1,0 +1,3 @@
+usuario = root
+clave = root12345
+noombre bd = yuyitosbd
